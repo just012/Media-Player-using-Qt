@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="RainDrop">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>613</width>
+    <height>422</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="verticalStackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>0</y>
+      <width>111</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="verticalStackedWidgetPage1">
+     <layout class="QVBoxLayout" name="playList"/>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>613</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFIle">
+    <property name="title">
+     <string>Media</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <widget class="QMenu" name="menuVideo">
+    <property name="title">
+     <string>Playback</string>
+    </property>
+    <addaction name="actionPlay"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionStop"/>
+    <addaction name="actionFF"/>
+    <addaction name="actionrewind"/>
+    <addaction name="actionPower"/>
+   </widget>
+   <widget class="QMenu" name="menuAudio">
+    <property name="title">
+     <string>Audio</string>
+    </property>
+    <addaction name="actionmute"/>
+   </widget>
+   <widget class="QMenu" name="menuVideo_2">
+    <property name="title">
+     <string>Video</string>
+    </property>
+    <addaction name="actionfull_screen"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFIle"/>
+   <addaction name="menuVideo"/>
+   <addaction name="menuAudio"/>
+   <addaction name="menuVideo_2"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="separator"/>
+   <addaction name="actionrewind"/>
+   <addaction name="separator"/>
+   <addaction name="actionPlay"/>
+   <addaction name="separator"/>
+   <addaction name="actionFF"/>
+   <addaction name="actionPause"/>
+   <addaction name="separator"/>
+   <addaction name="actionStop"/>
+   <addaction name="separator"/>
+   <addaction name="actionmute"/>
+   <addaction name="separator"/>
+   <addaction name="actionplayList"/>
+   <addaction name="separator"/>
+   <addaction name="actionshuffle"/>
+   <addaction name="separator"/>
+   <addaction name="actionrepeat"/>
+   <addaction name="separator"/>
+   <addaction name="actionfull_screen"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/folder.png</normaloff>:/images/icons/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string> Open File</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a File</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/play.png</normaloff>:/images/icons/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/pause.png</normaloff>:/images/icons/pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/stop.png</normaloff>:/images/icons/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionmute">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/mute.png</normaloff>:/images/icons/mute.png</iconset>
+   </property>
+   <property name="text">
+    <string>Mute</string>
+   </property>
+   <property name="toolTip">
+    <string>mute</string>
+   </property>
+  </action>
+  <action name="actionFF">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/forward.png</normaloff>:/images/icons/forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fast Forward</string>
+   </property>
+   <property name="toolTip">
+    <string>forward</string>
+   </property>
+  </action>
+  <action name="actionrewind">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/rewind.png</normaloff>:/images/icons/rewind.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rewind</string>
+   </property>
+   <property name="toolTip">
+    <string>rewind</string>
+   </property>
+  </action>
+  <action name="actionplayList">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/playlist.png</normaloff>:/images/icons/playlist.png</iconset>
+   </property>
+   <property name="text">
+    <string>playList</string>
+   </property>
+   <property name="toolTip">
+    <string>playList</string>
+   </property>
+  </action>
+  <action name="actionshuffle">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/shuffle.png</normaloff>:/images/icons/shuffle.png</iconset>
+   </property>
+   <property name="text">
+    <string>shuffle</string>
+   </property>
+   <property name="toolTip">
+    <string>shuffle</string>
+   </property>
+  </action>
+  <action name="actionrepeat">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/repeat.png</normaloff>:/images/icons/repeat.png</iconset>
+   </property>
+   <property name="text">
+    <string>repeat</string>
+   </property>
+  </action>
+  <action name="actionfull_screen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/full_screen.png</normaloff>:/images/icons/full_screen.png</iconset>
+   </property>
+   <property name="text">
+    <string>full_screen</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/info.png</normaloff>:/images/icons/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionPower">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/images/icons/power.png</normaloff>:/images/icons/power.png</iconset>
+   </property>
+   <property name="text">
+    <string>Power</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
